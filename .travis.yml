@@ -31,6 +31,7 @@ before_script:
 
 script:
   - coala --non-interactive -V
+  - pip install --upgrade pytest~=4.6
   - python -m pytest
   - docker build -t "corobo" .
   - docker images
